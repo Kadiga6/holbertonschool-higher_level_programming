@@ -2,7 +2,6 @@
 """ aaaaaaaaa """
 
 
-
 class Square:
     """ aaaaaaaaaa """
 

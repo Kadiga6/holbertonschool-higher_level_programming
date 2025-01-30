@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+""" définr une classe square """
+
+
 class Square:
+    """ Initialisation du carré avec une taille optionnelle. """
+
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
@@ -10,8 +15,10 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """ Vérifie si size est un entier """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
+        """ Vérifie si size est négatif """
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
@@ -36,9 +43,9 @@ class Square:
             print("")
             return
 
-        # Gérer les lignes initiales dues à position[1]
+        """ Gérer les lignes initiales dues à position[1] """
         print("\n" * self.__position[1], end="")
 
-        # Gérer chaque ligne du carré
+        """ Gérer chaque ligne du carré """
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)

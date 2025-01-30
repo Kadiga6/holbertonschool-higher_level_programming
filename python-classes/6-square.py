@@ -31,7 +31,7 @@ class Square:
     def position(self, value):
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(isinstance(n, int) and n >= 0 for n in position):
+        if not all(isinstance(n, int) and n >= 0 for n in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -47,5 +47,5 @@ class Square:
         print("\n" * self.__position[1], end="")
 
         """ Gérer chaque ligne du carré """
-        for _ in range(self.__size):
+        for i in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)

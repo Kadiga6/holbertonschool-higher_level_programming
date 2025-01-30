@@ -4,5 +4,4 @@
 
 class Rectangle:
     """ Classe qui définit un rectangle. """
-
-    return rectangle
+    pass

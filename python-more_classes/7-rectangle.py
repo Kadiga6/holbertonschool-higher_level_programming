@@ -57,10 +57,17 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Retourne une représentation du rectangle print_symbol"""
+        """Retourne une représentation du rectangle print_symbole """
+        string = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        return "\n".join([str(self.print_symbol) * self.__width for i in range(self.__height)])
+            return string
+        else:
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    string += str(self.print_symbol)
+                if i != self.__height - 1:
+                    string += '\n'
+            return string
 
     def __repr__(self):
         """Retourne une chaîne représentant l'objet rectangle"""

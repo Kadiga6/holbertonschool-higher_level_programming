@@ -5,9 +5,9 @@
 class Rectangle:
     """Classe qui définit un rectangle."""
 
-    def __init__(self, width=0,height=0):
-        """ Initialise un rectangle avec une largeur et une hauteur optionnelles """
-        
+    def __init__(self, width=0, height=0):
+        """ Initialise un rectangle avec une largeur """
+        """ Initialise un rectangle avec une hauteur optionnelles """
         self.width = width
         self.height = height
 

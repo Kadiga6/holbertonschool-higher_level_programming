@@ -7,5 +7,4 @@ class MyList(list):
 
 
 def print_sorted(self):
-    """Affiche la liste triée en ordre croissant."""
     print(sorted(self))  # Utilise sorted() pour trier sans modifier l'original

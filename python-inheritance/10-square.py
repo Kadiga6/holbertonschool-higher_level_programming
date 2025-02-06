@@ -2,7 +2,7 @@
 """Module définissant la classe Rectangle qui hérite de BaseGeometry."""
 
 
-Rectangle = __import__('9-rectangle.py').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -12,6 +12,7 @@ class Square(Rectangle):
         """Initialisation avec la validation de la taille."""
         self.integer_validator("size", size)
         """Appel à la méthode __init__ de Rectangle"""
+        self.__size = size
         super().__init__(size, size)
 
     def area(self):

@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""Spécifie l'interpréteur à utiliser pour exécuter ce script."""
+"""Geometry module"""
 
 
-class BaseGeometry:
-    """Classe de base pour les géométries."""
-
+class BaseGeometry():
+    """Empty class BaseGeometry"""
     def area(self):
-        """Lève une exception indiquant que l'aire n'est pas implémentée."""
+        """raises an Exception with the message"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Valide la valeur en vérifiant qu'elle est un entier et > 0."""
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        """Si la valeur est <= 0"""
+        """Function that validates value
+        Args:
+            name: a string
+            value: Value of geometry
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))

@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""Définition de la classe MyList qui hérite de list."""
+"""defines class MyList"""
 
 
 class MyList(list):
-    """Classe qui hérite de list et ajoute une méthode d'affichage trié."""
-
-
-def print_sorted(self):
-    print(sorted(self))  # Utilise sorted() pour trier sans modifier l'original
+    """class that inherits from list
+    with public instance method to print sorted list"""
+    def print_sorted(self):
+        print(sorted(self))

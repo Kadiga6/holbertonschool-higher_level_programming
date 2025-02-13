@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module contains the append_file function
+"""
 
 
 def append_write(filename="", text=""):

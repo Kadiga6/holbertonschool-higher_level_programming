@@ -14,5 +14,6 @@ def load_from_json_file(filename):
     Returns:
         object: L'objet Python représenté par le fichier JSON.
     """
+    import json
     with open(filename, 'r', encoding='utf-8') as file:
         return json.load(file)

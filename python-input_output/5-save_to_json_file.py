@@ -13,8 +13,9 @@ def save_to_json_file(my_obj, filename):
         filename (str): Le nom du fichier dans lequel écrire.
 
     """
+    import json
     with open(filename, 'w', encoding='utf-8') as file:
         """Convertit l'objet my_obj en une chaîne JSON et
         écrit cette chaîne dans le fichier ouvert.
         """
-        return json.dumps(my_obj, file)
+        return json.dump(my_obj, file)

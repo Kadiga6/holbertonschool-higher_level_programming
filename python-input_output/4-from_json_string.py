@@ -3,6 +3,7 @@
 Ce module contient la fonction to_json_string.
 """
 
+
 def from_json_string(my_str):
     """
     Retourne un objet représenté par une chaîne JSON.

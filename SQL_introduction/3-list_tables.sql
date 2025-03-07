@@ -1,3 +1,2 @@
--- Script pour lister toutes les tables de la base de données mysql
-USE mysql;
+-- Script pour lister toutes les tables de la base de données mysq
 SHOW TABLES;

@@ -10,4 +10,4 @@ This helps improve the initial page rendering speed and provides better control 
    
 2. **Improved SEO**: Search engines can easily crawl and index the HTML content rendered on the server, improving organic search rankings. For client-side JavaScript applications, some parts of the content may not be indexed, as they depend on JavaScript that might not be executed properly by search engine crawlers.
 
-3. **Social Sharing**: When you share links to a page rendered with SSR, rich previews (e.g., images, titles, descriptions) are generated directly from the HTML without waiting for client-side JavaScript rendering.
+3. **Social Sharing**: When you share links to a page rendered with SSR, rich previews (e.g., images, titles, descriptions) are generated directly from the HTML without waiting for client-side JavaScript renderinggggggggggggg.

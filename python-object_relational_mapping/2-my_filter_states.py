@@ -2,11 +2,10 @@
 '''
 This module takes in an argument
 and displays all values in the states table of hbtn_0e_0_usa
-where name matches the argument.
+where name matches the argument exactly (case-sensitive).
 '''
 import MySQLdb
 import sys
-
 
 if __name__ == "__main__":
 
@@ -18,14 +17,15 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
     state_name = sys.argv[4]
 
+    # Connexion à la base de données
     db = MySQLdb.connect(host="localhost", port=3306,
-                         user=username, passwd=password, db=db_name)
+            user=username, passwd=password, db=db_name)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states "
-                   "WHERE name = '{}' "
-                   "ORDER BY id ASC".format(state_name))
-    states = cursor.fetchall()
 
+    # Requête avec comparaison sensible à la casse + sécurité
+    cursor.execute("SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC", (state_name,))
+
+    states = cursor.fetchall()
     for state in states:
         print(state)
 
